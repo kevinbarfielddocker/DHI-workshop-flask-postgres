@@ -112,7 +112,7 @@ Discuss the volume directory change for postgres.
 
 Open the Docker Desktop GUI.
 
-Select the web-1 container.
+Select the `web-1` container.
 
 Select Exec.
 
