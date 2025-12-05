@@ -1,0 +1,32 @@
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      db:
+       condition: service_healthy
+    environment:
+      - DATABASE_URL=postgresql://postgres:mysecretpassword@db:5432/dinner_db
+  db:
+    image: postgres:17.7
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=dinner_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      # pg_isready is a utility built into the postgres image
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      # Check every 5 seconds
+      interval: 5s
+      # Fail if it takes longer than 5 seconds to respond
+      timeout: 5s
+      # Give up after 5 failed attempts (container becomes 'unhealthy')
+      retries: 5
+
+volumes:
+  postgres_data:
