@@ -100,7 +100,7 @@ Change the image in the FROM statement to `FROM analog/dhi-python:3.13-alpine3.2
 
 Change the db image tag to `    image: analog/dhi-postgres:17.7` and save the file.
 
-Run `docker compose up --build`.
+Run `docker compose up -d --build`.
 
 Confirm the application is running in the browser:
 
