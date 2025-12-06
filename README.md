@@ -68,13 +68,7 @@ Mirror the postgres DHI image to dhi-postgres (already done).
 
 #### Python
 
-Part 1: Collect Vex statements:
-
-    docker scout vex get registry://docker.io/analog/dhi-python:3.13-alpine3.22-dev_curl -o vex-python.json
-
-Part 2: Use Vex statements to scan DHI image:
-
-    docker run -it -v /var/run/docker.sock:/var/run/docker.sock -v .:/opt aquasec/trivy image --scanners vuln --vex /opt/vex-python.json docker.io/analog/dhi-python:3.13-alpine3.22-dev_curl
+    docker run -it -v /var/run/docker.sock:/var/run/docker.sock -v .:/opt aquasec/trivy image --scanners vuln analog/dhi-python:3.13-alpine3.22-dev_curl
 
 Review Trivy output
 
