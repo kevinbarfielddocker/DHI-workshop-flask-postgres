@@ -16,7 +16,7 @@ Start the application:
 
 Go to the application in the browser:
 
-    http://localhost:5000
+    http://localhost:5001
 
 Enter a reservation using the application.
 
@@ -98,7 +98,7 @@ Run `docker compose up -d --build`.
 
 Confirm the application is running in the browser:
 
-     http://localhost:5000
+     http://localhost:5001
 
 Discuss the volume directory change for postgres.
 
