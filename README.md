@@ -4,7 +4,7 @@
 
 ### Run the sample application
 
-    git clone https://github.com/kevinbarfielddocker/dhi-python-postgres
+    git clone https://github.com/kevinbarfielddocker/dhi-workshop-flask-postgres
 
 Review the `Dockerfile` file.
 
