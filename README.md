@@ -26,7 +26,7 @@ Enter a reservation using the application.
 
 Review vulnerabilities in the base image.
 
-## Docker Hardended Images
+## Docker Hardened Images
 
 Go to the Analog Docker Hub organization
 
@@ -34,7 +34,7 @@ Go to the Analog Docker Hub organization
 
 Click Hardened Images and Catalog.
 
-Type python in the search bar to find the python hardended image.
+Type python in the search bar to find the python hardened image.
 
 Select the python image.
 
